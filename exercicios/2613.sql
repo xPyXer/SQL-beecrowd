@@ -4,5 +4,5 @@
  * Escriba su solución aquí
  */
 SELECT movies.id, movies.name
-FROM movies movies INNER JOIN genres genres ON movies.id_genres = genres.id	
-WHERE LOWER(genres.description) = 'action';
+FROM movies, prices
+WHERE movies.id_prices = prices.id AND prices.value < 2.00;
